@@ -57,7 +57,7 @@ namespace TP11_ProyectoFinal.Models
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
             {
-                db.Execute("sp_AgregarJuego", new
+                db.Execute("sp_AgregarConcierto", new
                 {
                     Nombre = Con.Nombre,
                     Descripcion = Con.Descripcion,

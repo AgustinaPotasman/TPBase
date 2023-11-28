@@ -1,15 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using TP11_ProyectoFinal.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using TP11_ProyectoFinal.Models;
 namespace TP11_ProyectoFinal.Controllers;
 
