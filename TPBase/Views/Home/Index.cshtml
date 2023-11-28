@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/banner1.jpg" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
+
+    <div class="row mb-3 mt-3">
+        <div class="col d-flex justify-content-center">
+            <a href='@Url.Action("Agregarconcierto","Home")' class="btn btn-info">Agregar concierto</a>
+        </div>
+    </div>
+    <div class="row">
+            @foreach (Concierto item in @ViewBag.listaConciertos)
+            {
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white w-100 mb-5">
+                        <img src="/@item.Imagen" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        
+    </div>
+</body>
