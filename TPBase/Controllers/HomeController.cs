@@ -1,8 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using TP11_ProyectoFinal.Models;
-using TP11_ProyectoFinal.Models;
-namespace TP11_ProyectoFinal.Controllers;
+using TPBase.Models;
+namespace TPBase.Controllers;
 
 public class HomeController : Controller
 {

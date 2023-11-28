@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 
 
-namespace TP11_ProyectoFinal.Models
+namespace TPBase.Models
 
 {
     public class BD
@@ -91,7 +91,6 @@ namespace TP11_ProyectoFinal.Models
                 return db.QueryFirstOrDefault<Usuario>(sql, new{ Nombre = nombre });
             }
         }
-
 
     }
 }

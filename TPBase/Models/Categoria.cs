@@ -1,5 +1,5 @@
 
-namespace TP11_ProyectoFinal.Models
+namespace TPBase.Models
 {
     public class Categoria
     {
