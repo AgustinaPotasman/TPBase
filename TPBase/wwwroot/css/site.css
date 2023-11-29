@@ -14,6 +14,238 @@ body {
   margin: 20px 60px 0px 20px;
 }
 
+
+/* Estilos para el carrusel */
+#carouselExampleIndicators {
+  margin-top: 20px;
+}
+
+
+
+body {
+  background-image: url('/TpBase/TPBase/wwwroot/Imagenes/violeta-oscuro.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+
+
+/* Estilos para el enlace de cerrar sesión */
+.CS {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Estilos para el botón de agregar concierto */
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+/* Estilos para la fila de tarjetas de conciertos */
+.row.mb-3.mt-3 {
+  margin-top: 20px;
+}
+
+/* Estilos para las tarjetas de conciertos */
+.card {
+  border: none;
+}
+
+/* Estilos para el título de la tarjeta de concierto */
+.card-title {
+  color: white;
+}
+
+/* Ajuste de margen inferior para las tarjetas */
+.c
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para la imagen de login */
+.imagenLogin {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.formLogin {
+  margin-top: 20px;
+}
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
+}
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el enlace de registro y el enlace de olvidar contraseña */
+.formLogin a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilos para la alerta de error si existe */
+.alert-danger {
+  margin-top: 20px;
+}
+
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para la imagen de inicio de sesión */
+.imagenLogin {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.formLogin {
+  margin-top: 20px;
+}
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
+}
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+.formLogin a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilos para la alerta de éxito si existe */
+.alert-success {
+  margin-top: 20px;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para la imagen de inicio de sesión */
+.imagenLogin {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de registro */
+.formLogin {
+  margin-top: 20px;
+}
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
+}
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la alerta de error si ex */
+
+
+/* Estilos generales para el formulario */
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  margin-top: 10%;
+}
+
+/* Estilos para los campos del formulario */
+.form-control {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el enlace "Terminos de venta" */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Estilos para el checkbox y su etiqueta */
+.form-check-input {
+  margin-right: 5px;
+}
+
+/* Estilos para el botón de pago */
+.btn-success {
+  width: 100%;
+}
+
+/* Estilos adicionales para mejorar la apariencia del formulario según necesidades */
+#inputZip {
+  width: 80px;
+}
+
+/* Otras clases útiles para la alineación y el espaciado */
+.form-row {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la alerta después de enviar el formulario */
+.alert {
+  margin-top: 10px;
+}
+
+
+
 footer {
   position: fixed; 
   bottom: 0; 
