@@ -49,21 +49,6 @@ namespace TPBase.Models
             }
         }   
         
-
- public static void AgregarConciertoSP(Concierto Con)
-        {
-            using (SqlConnection db = new SqlConnection(_connectionString))
-            {
-                db.Execute("sp_AgregarConcierto", new
-                {
-                    Nombre = Con.Nombre,
-                    Descripcion = Con.Descripcion,
-                    FechaCreacion = Con.FechaConcierto,
-                    Imagen = Con.Imagen,
-                    Precio = Con.Precio,
-                });
-            }
-        }
         public static Usuario BuscarUsuario(Usuario U)
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
@@ -88,7 +73,6 @@ namespace TPBase.Models
                 return db.QueryFirstOrDefault<Usuario>(sql, new{ Nombre = nombre });
             }
         }
-
         public static int AgregarUsuario(Usuario usuario)
                 {
                     using (SqlConnection db = new SqlConnection(_connectionString))

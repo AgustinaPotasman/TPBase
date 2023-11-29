@@ -28,11 +28,7 @@
     
     <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
 
-    <div class="row mb-3 mt-3">
-        <div class="col d-flex justify-content-center">
-            <a href='@Url.Action("Agregarconcierto","Home")' class="btn btn-info">Agregar concierto</a>
-        </div>
-    </div>
+
     <div class="row">
             @foreach (Concierto item in @ViewBag.listaConciertos)
             {
