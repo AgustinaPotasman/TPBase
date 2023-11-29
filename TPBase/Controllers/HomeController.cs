@@ -123,7 +123,11 @@ public class HomeController : Controller
     public Concierto MostrarConciertosAjax(int IdConcierto)
     {
         return BD.verInfoConcierto(IdConcierto);
+        
     }
+   public IActionResult ComprarConcierto(){
+    return View();
+   }
 
     public Concierto MostrarMasInfoAjax(int IdConcierto)
     {

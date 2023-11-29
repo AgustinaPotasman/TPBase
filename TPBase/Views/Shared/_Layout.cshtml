@@ -3,23 +3,19 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - TPXX - Apellido</title>
+        <title>@ViewData["Title"] </title>
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     </head>
     <body>
         <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
-<<<<<<< HEAD
-           
-=======
-            Encabezado TP 11
->>>>>>> d7c8482af8db69bd371c641b0f31ff2e9c88e589
+
         </header>
         <div style="padding:20px 10px 0px 10px;">
             @RenderBody()
         </div>
 
         <footer>
-                &copy; @DateTime.Now.Year - Taller de Programación - TP11
+                &copy; @DateTime.Now.Year 
         </footer>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
