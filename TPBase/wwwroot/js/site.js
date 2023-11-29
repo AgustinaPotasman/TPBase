@@ -1,4 +1,13 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+function CrearCuenta() {
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: '/Home/CrearCuentaAjax',
+        //data: { IdUsuario: idU },
+        success: function (response) {
+            let content = "Nombre de usuario: <input type='text' class='play' id='player' name='Nombre' placeholder='Ingrese su nombre'></input>"
+            $("#CrearCuenta").html(content);
+        }
 
-// Write your JavaScript code.
+    })
+}
