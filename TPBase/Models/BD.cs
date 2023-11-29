@@ -1,9 +1,5 @@
-
-
 using Dapper;
 using System.Data.SqlClient;
-
-
 
 namespace TPBase.Models
 
@@ -11,6 +7,7 @@ namespace TPBase.Models
     public class BD
     {
         private static string _connectionString = @"Server=localhost;DataBase=WorldConcerts;Trusted_Connection=True;";
+      
         private static List<Concierto> listaConciertos = new List<Concierto>();
         private static List<Categoria> listaCategorias = new List<Categoria>();
 
