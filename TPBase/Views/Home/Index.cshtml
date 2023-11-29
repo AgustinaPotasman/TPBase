@@ -45,18 +45,14 @@
      <!-- cerrar carrousel -->
     <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
 
-    <div class="row mb-3 mt-3">
-        <div class="col d-flex justify-content-center">
-            <a href='@Url.Action("Agregarconcierto","Home")' class="btn btn-info">Agregar concierto</a>
-        </div>
-    </div>
+    
     <div class="row">
         @{
             @foreach (Concierto item in @ViewBag.listaconciertos)
             {
                 <div class="col-md-3">
                     <div class="card bg-dark text-white w-100 mb-5">
-                        <img src="/@item.Imagen" class="card-img-top" alt="...">
+                        <img src="@item.Imagen" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
