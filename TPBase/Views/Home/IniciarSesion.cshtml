@@ -1,5 +1,4 @@
 <div class="container">
-    <img class="imagenLogin" src="/Delta.png">
     <form class="formLogin" method="get" action='@Url.Action("VerificarUsuario","Home")' enctype="multipart/form-data">
         <h1 class="text-white">Iniciar Sesión</h1>
         <input class="mb-3" type="text" name="Nombre" placeholder="Ingrese su usuario" required>
@@ -10,10 +9,17 @@
             Ingresar
         </button>
         <br>
+<<<<<<< HEAD
         <a style="color: rgb(0, 0, 0);" href='@Url.Action("Registrarse","Home")'>No tienes una cuenta, Registrese.</a>
         <br>
         <br>
         <a style="color: rgb(0, 0, 0);" href='@Url.Action("BuscarOlvidoContraseña","Home")'>Olvide mi contraseña</a>
+=======
+        <a style="color: black;" href='@Url.Action("Registrarse","Home")'>No tienes una cuenta, Registrese.</a>
+        <br>
+        <br>
+        <a style="color: black;" href='@Url.Action("BuscarOlvidoContraseña","Home")'>Olvide mi contraseña</a>
+>>>>>>> d7c8482af8db69bd371c641b0f31ff2e9c88e589
     </form>
     @if (ViewBag.Mensaje != null)
     {
