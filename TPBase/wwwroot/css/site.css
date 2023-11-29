@@ -30,6 +30,17 @@ body {
 .formLogin h1 {
   color: #333; 
 }
+/* Alinea el carrusel al centro */
+#carouselExampleIndicators {
+  margin: auto;
+  width: 50%; /* Puedes ajustar el ancho según tus necesidades */
+}
+
+/* Estilo para los indicadores (puntos inferiores) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px; /* Espaciado opcional des
 
 .formLogin input {
   width: 50%;
@@ -62,128 +73,9 @@ body {
   transform: scale(1.1); /* Hacemos el botón un 10% más grande en hover */
 }
 
-
-
-/* agregar juego */
-
-
-.formAgr {
-  width: 400px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.formAgr label {
-  font-size: 16px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.formAgr input,
-.formAgr select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-.formAgr input[type="file"] {
-  padding: 8px;
-}
-
-.formAgr input[type="submit"] {
-  background-color: #3498db;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.formAgr input[type="submit"]:hover {
-  background-color: #2980b9;
-}
-
-.formAgr .error {
-  color: #e74c3c;
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-/* Estilo para el contenedor de la fecha */
-.formAgr .fecha-container {
-  display: flex;
-  gap: 10px;
-}
-
-/* Estilo para el contenedor de la imagen */
-.formAgr .imagen-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Estilo para la etiqueta de la imagen */
-.formAgr .imagen-container label {
-  margin-bottom: 0;
-}
-
-.formulario{
-  background-image: url("/img/Fondo.jpg");
-}
-
-
-
-
-
 /* comprar */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.likes {
-  font-size: medium;
-  margin-bottom: -11%;
-  margin-left: 12%;
-}
-
-.corazon {
-  width: 10%;
-  height: 12%;
-}
 
 .masInfo{
   margin-top: 5%;
@@ -331,8 +223,4 @@ body {
   bottom: 96%;
   right: 8%;
   color: #eee;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d7c8482af8db69bd371c641b0f31ff2e9c88e589
