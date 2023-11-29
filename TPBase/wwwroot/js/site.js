@@ -21,8 +21,9 @@ function MostrarMasInfo(idC) {
         data: { Idconcierto: idC },
         success: function (response) {
             console.log(response);
-            $("#FechaConcierto").html("Fecha de lanzamiento: " + response.fechaConcierto.substr(0, response.fechaConcierto.length - 10)).addClass("custom-info");
-            $("#Descripcion").html(response.descripcion).addClass("custom-info");
+            $("#FechaConcierto").html("Fecha del concierto: " + response.fechaConcierto);
+            $("#Descripcion").html(response.descripcion);
+             $("#Precio").html("Precio: " + response.descripcion);
         }
     });
 }
