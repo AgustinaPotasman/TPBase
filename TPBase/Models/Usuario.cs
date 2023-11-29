@@ -15,5 +15,6 @@ namespace TPBase.Models
         }
 
         public Usuario() { }
+
     }
 }
