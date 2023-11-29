@@ -1,4 +1,3 @@
-
 namespace TPBase.Models
 {
     public class Categoria
