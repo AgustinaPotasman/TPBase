@@ -76,7 +76,7 @@ public class HomeController : Controller
             ViewBag.Mensaje = "Las contraseñas no coinciden";
             return View("Registrarse");
         }
-        BD.AgregarUsuarioSP(U);
+        BD.AgregarUsuario(U);
 
         return RedirectToAction("PaginaPrincipal", "Home");
     }
@@ -105,7 +105,7 @@ public class HomeController : Controller
     {
         if (U.Contraseña == Contraseña2)
         {
-            BD.AgregarUsuarioSP(U);
+            BD.AgregarUsuario(U);
             return RedirectToAction("PaginaPrincipal", "Home");
         }
         else
@@ -133,7 +133,7 @@ public class HomeController : Controller
 
     public IActionResult CrearCuentaAjax(Usuario usuario)
     {
-        BD.AgregarUsuarioSP(usuario);
+        BD.AgregarUsuario(usuario);
         return View("Index");
 
     }

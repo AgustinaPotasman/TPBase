@@ -61,7 +61,7 @@ namespace TPBase.Models
                     FechaCreacion = Con.FechaConcierto,
                     Imagen = Con.Imagen,
                     Precio = Con.Precio,
-                }, commandType: CommandType.StoredProcedure);
+                });
             }
         }
         public static Usuario BuscarUsuario(Usuario U)
@@ -89,5 +89,16 @@ namespace TPBase.Models
             }
         }
 
+        public static int AgregarUsuario(Usuario usuario)
+                {
+                    using (SqlConnection db = new SqlConnection(_connectionString))
+                    {
+                        return db.Execute("sp_AgregarUsuario", new
+                        {
+                            Contraseña = usuario.Contraseña,
+                            Nombre = usuario.Nombre
+                        });
+                    }
+                }
     }
 }
