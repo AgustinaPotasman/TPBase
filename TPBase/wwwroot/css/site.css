@@ -1,5 +1,7 @@
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,223 +10,244 @@ html {
   }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+body {
+  margin: 20px 60px 0px 20px;
 }
+
+
+/* Estilos para el carrusel */
+#carouselExampleIndicators {
+  margin-top: 20px;
+}
+
+
 
 body {
-  background: rgb(18,180,232);
-  background: linear-gradient(90deg, rgba(18,180,232,1) 0%, rgba(2,156,218,1) 30%, rgba(2,156,218,1) 72%, rgba(18,209,232,1) 100%);
-}
-.NuevoJuego {
-  position: absolute;
-  top: 39%;
-  left: 44.5%;
-  width: 10%;
-}
-.iniciosesion{
-  background-color: #71cedaab;
+  background-image: url('/TpBase/TPBase/wwwroot/Imagenes/violeta-oscuro.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
 }
 
-.formLogin h1 {
-  color: #333; 
+
+/* Estilos para el enlace de cerrar sesión */
+.CS {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
 }
-/* Alinea el carrusel al centro */
-#carouselExampleIndicators {
+
+/* Estilos para el botón de agregar concierto */
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+/* Estilos para la fila de tarjetas de conciertos */
+.row.mb-3.mt-3 {
+  margin-top: 20px;
+}
+
+/* Estilos para las tarjetas de conciertos */
+.card {
+  border: none;
+}
+
+/* Estilos para el título de la tarjeta de concierto */
+.card-title {
+  color: white;
+}
+
+/* Ajuste de margen inferior para las tarjetas */
+.c
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
   margin: auto;
-  width: 50%; /* Puedes ajustar el ancho según tus necesidades */
-}
-
-/* Estilo para los indicadores (puntos inferiores) */
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 10px; /* Espaciado opcional des
-
-.formLogin input {
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.imag1{
-  margin-left: 55px;
-}
-
-.formLogin button {
-  width: 40%;
-  padding: 10px;
-  background-color: #4CAF50; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s; /* Agregamos transiciones para suavizar los cambios */
-}
-
-
-
-.formLogin button:hover {
-  background-color: #45a049; /* Cambiamos el color de fondo en hover */
-  transform: scale(1.1); /* Hacemos el botón un 10% más grande en hover */
-}
-
-/* comprar */
-
-
-
-.masInfo{
-  margin-top: 5%;
-}
-.buttonCerrar {
-  margin-right: 34%;
-  width: 150px;
-  height: 35px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: red;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #e62222;
-}
-
-.buttonCerrar .text {
-  transform: translateX(35px);
-  color: white;
-  font-weight: bold;
-}
-
-.buttonCerrar .icon {
-  position: absolute;
-  border-left: 1px solid #c41b1b;
-  transform: translateX(110px);
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonCerrar svg {
-  width: 15px;
-  fill: #eee;
-}
-
-.buttonCerrar:hover {
-  background: #ff3636;
-}
-
-.buttonCerrar:hover .text {
-  color: transparent;
-}
-
-.buttonCerrar:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
-}
-
-.buttonCerrar:focus {
-  outline: none;
-}
-
-.buttonCerrar:active .icon svg {
-  transform: scale(0.8);
-}
-
-.buttonComprar {
-  width: 150px;
-  height: 35px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: #04ca0e;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  background: #04ca0e;
-}
-
-.buttonComprar,
-.buttonComprar span,
-.buttonCerrar,
-.buttonCerrar span {
-  transition: 400ms;
-}
-
-.buttonComprar .text {
-  transform: translateX(35px);
-  color: white;
-  font-weight: bold;
-}
-
-.buttonComprar .icon {
-  position: absolute;
-  border-left: 1px solid #09a711;
-  transform: translateX(110px);
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonComprar svg {
-  width: 15px;
-  fill: #eee;
-}
-
-.buttonComprar:hover {
-  background: #09a711;
-}
-
-.buttonComprar:hover .text {
-  color: transparent;
-}
-
-.buttonComprar:hover .icon {
-  width: 150px;
-  border-left: none;
-  transform: translateX(0);
-}
-
-.buttonComprar:focus {
-  outline: none;
-}
-
-.buttonComprar:active .icon svg {
-  transform: scale(0.8);
-}
-
-.formLogin {
-  margin-left: 30%;
-  width: 40%;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 24%, rgba(0,176,234,1) 100%);
-  /*background: rgb(242,242,242);
-    background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(208,208,233,1) 35%, rgba(185,229,238,1) 100%);*/
+  padding: 20px;
   text-align: center;
 }
 
+/* Estilos para la imagen de login */
 .imagenLogin {
-  margin-top: 10%;
-  margin-left: 30%;
-  width: 40%;
+  max-width: 100%;
+  height: auto;
 }
 
-.CS{
-  position: absolute;
-  bottom: 96%;
-  right: 8%;
-  color: #eee;
-<<<<<<< HEAD
+/* Estilos para el formulario de inicio de sesión */
+.formLogin {
+  margin-top: 20px;
 }
-=======
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
 }
->>>>>>> cf92a92fabb558a27fa0f1d7b6cc26a72d3777af
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el enlace de registro y el enlace de olvidar contraseña */
+.formLogin a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilos para la alerta de error si existe */
+.alert-danger {
+  margin-top: 20px;
+}
+
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para la imagen de inicio de sesión */
+.imagenLogin {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.formLogin {
+  margin-top: 20px;
+}
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
+}
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el enlace de inicio de sesión */
+.formLogin a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilos para la alerta de éxito si existe */
+.alert-success {
+  margin-top: 20px;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para la imagen de inicio de sesión */
+.imagenLogin {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para el formulario de registro */
+.formLogin {
+  margin-top: 20px;
+}
+
+/* Estilos para el título del formulario */
+.formLogin h1 {
+  color: white;
+}
+
+/* Estilos para los campos de entrada y el botón */
+.formLogin input,
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la alerta de error si ex */
+
+
+/* Estilos generales para el formulario */
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+form {
+  margin-top: 10%;
+}
+
+/* Estilos para los campos del formulario */
+.form-control {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el enlace "Terminos de venta" */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Estilos para el checkbox y su etiqueta */
+.form-check-input {
+  margin-right: 5px;
+}
+
+/* Estilos para el botón de pago */
+.btn-success {
+  width: 100%;
+}
+
+/* Estilos adicionales para mejorar la apariencia del formulario según necesidades */
+#inputZip {
+  width: 80px;
+}
+
+/* Otras clases útiles para la alineación y el espaciado */
+.form-row {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la alerta después de enviar el formulario */
+.alert {
+  margin-top: 10px;
+}
+
+
+
+footer {
+  position: fixed; 
+  bottom: 0; 
+  margin: 10px 0px 20px 0px;
+}
