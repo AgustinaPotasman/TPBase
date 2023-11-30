@@ -12,7 +12,6 @@ function CrearCuenta() {
     })
 }
 
-
 function MostrarMasInfo(idC) {
     $.ajax({
         type: 'POST',
@@ -23,30 +22,8 @@ function MostrarMasInfo(idC) {
             console.log(response);
             $("#FechaConcierto").html("Fecha del concierto: " + response.fechaConcierto);
             $("#Descripcion").html(response.descripcion);
-            $("#Precio").html("Precio: " + response.descripcion);
+            $("#Precio").html("Precio: " + response.Precio);
         }
     });
 }
 
-
-function Likes(idJ, element) {
-    let h6CantLikes = element.parentNode.children[2];
-    let elementIsLiked = element.src.includes('CorazonBlanco.jpg');
-    $.ajax({
-        type: 'POST',
-        dataType: 'JSON',
-        url: '/Home/LikesAjax',
-        data:
-        {
-            IdJuego: idJ,
-            CantLikes: !elementIsLiked ? -1 : 1 
-        },
-        success: function (response) {
-            console.log(response);
-            if (elementIsLiked) element.src = '/Imagenes/CorazonRojo.jpg';
-            else element.src = '/Imagenes/CorazonBlanco.jpg';
-            h6CantLikes.innerText = response;
-        }
-
-    })
-}

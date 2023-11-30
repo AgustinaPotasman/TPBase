@@ -29,7 +29,7 @@ namespace TPBase.Models
             }
             return listaCategorias;
         }
-        public static Concierto verInfoConcierto(int idc)
+      public static Concierto verInfoConcierto(int idc)
         {
             Concierto ConciertoActual = null;
             using (SqlConnection db = new SqlConnection(_connectionString))
@@ -39,6 +39,7 @@ namespace TPBase.Models
             }
             return ConciertoActual;
         }
+      
       
         public static Tarjeta VerificarSiExisteTarjeta(int numero)
         {
@@ -85,25 +86,6 @@ namespace TPBase.Models
                     }
                 }
 
-             public static int ActualizarLikesconciertoSP(int idJuego, int cantLikes)
-        {
-            using (SqlConnection db = new SqlConnection(_connectionString))
-            {
-                string idJuegoStr = idJuego.ToString();
-                return db.Execute("sp_ActualizarLikesJuego", new
-                {
-                    IdJuego = idJuegoStr,
-                    CantLikes = cantLikes
-                });
-            }
-        }
-        public static int VerCantLikes(int idJ)
-        {
-            using (SqlConnection db = new SqlConnection(_connectionString))
-            {
-                string sql = "SELECT CantLikes FROM conciertos WHERE Idconcierto = @pIdconcierto";
-                return db.QueryFirstOrDefault<int>(sql, new { pIdconcierto = idJ });
-            }
-        }
+   
     }
 }
