@@ -36,28 +36,12 @@ public class HomeController : Controller
     {
         return View();
     }
-    /*public IActionResult VerificarUsuario(Usuario U)
+    [HttpPost]
+    public int LikesAjax(int IdConcierto, int cantLikes)
     {
-
-        if (VerificarSiExisteUsuario(U) == true)
-        {
-            Usuario usuarioBD = BD.BuscarUsuarioXNombre(U.Nombre);
-            if (usuarioBD.Contraseña == U.Contraseña)
-            {
-            return RedirectToAction("PaginaPrincipal", "Home", new { IdUsuario = usuarioBD.IdUsuario});
-            }
-            else
-            {
-                ViewBag.Mensaje = "La contraseña es incorrecta";
-                return View("IniciarSesion");
-            }
-        }
-        else
-        {
-            ViewBag.Mensaje = "El usuario no existe o es incorrecto";
-            return View("IniciarSesion");
-        }
-    }*/
+        BD.AgregarLikes(IdConcierto, cantLikes);
+        return BD.VerCantLikes(IdConcierto);
+    }
 
     public IActionResult VerificarUsuario(Usuario U)
     {
