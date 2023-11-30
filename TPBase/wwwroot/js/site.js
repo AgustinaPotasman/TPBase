@@ -27,7 +27,6 @@ function MostrarMasInfo(idC) {
     });
 }
 function Likes(idc, element) {
-    alert("entre");
         let h6CantLikes = element.parentNode.children[2];
         let elementIsLiked = element.src.includes('CorazonBlanco.jpg');
         $.ajax({
