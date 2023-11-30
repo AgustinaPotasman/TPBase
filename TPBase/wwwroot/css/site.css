@@ -96,7 +96,6 @@ nav .container-fluid img{
 }
 .container{
   height: 300px;
-  
 }
 .imag1{
   margin-left: 55px;
@@ -260,4 +259,11 @@ nav .container-fluid img{
   bottom: 96%;
   right: 8%;
   color: #eee;
+}
+
+.col-md-3{
+  padding: 2%;
+}
+.col-md-3 img{
+  width: 20;
 }
