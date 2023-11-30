@@ -11,8 +11,9 @@ namespace TPBase.Models
         public string Imagen {get; set;}
         public int Precio {get; set;}
         public int FkCategoria {get; set;}
+         public int CantLikes{get; set;}
 
-        public Concierto(int idConcierto, string nombre, string descripcion, DateTime fechaConcierto, string imagen, int precio, int fkCategoria)
+        public Concierto(int idConcierto, string nombre, string descripcion, DateTime fechaConcierto, string imagen, int precio, int fkCategoria, int cantLikes)
         {
             IdConcierto = idConcierto;
             Nombre = nombre;
@@ -21,6 +22,7 @@ namespace TPBase.Models
             Imagen = imagen;
             Precio = precio;
             FkCategoria = fkCategoria;
+            CantLikes = cantLikes;
         }
 
         public Concierto() { }
