@@ -43,18 +43,22 @@
      <!-- cerrar carrousel -->
   <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
 
-  
-    
+    <!-- cards con likes -->
     <div class="row">
         @{
             @foreach (Concierto item in @ViewBag.listaConciertos)
             {
-                <div class="col-md-4">
-                    <div class="card bg-dark text-white w-100">
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white w-100 mb-5">
                         <img src="@item.Imagen" class="card-img-top" alt="...">
+                         <p>Precio: US$@item.Precio</p>
+                         <p>@item.CantLikes</p>
                         <div class="card-body">
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
+                            <p class="card-text">
+                            <img id="BotonLike" class="corazon" src="/CorazonBlanco.jpg" onclick="Likes(@item.IdConcierto)">
+                            </p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalJuego"
                             onclick="MostrarMasInfo(@item.IdConcierto)">
                                 Más info
                             </button>
@@ -63,7 +67,6 @@
                 </div>
             }
         }
-
     </div>
     <!-- Modal -->
    

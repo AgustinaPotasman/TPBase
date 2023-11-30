@@ -38,8 +38,8 @@ html {
 }
 
 body {
-  background: rgb(18,180,232);
-  background: linear-gradient(90deg, rgba(18,180,232,1) 0%, rgba(2,156,218,1) 30%, rgba(2,156,218,1) 72%, rgba(18,209,232,1) 100%);
+  background: rgb(164, 18, 232);
+  background: linear-gradient(90deg, rgb(164, 18, 232) 0%, rgb(164, 18, 232) 30%, rgb(164, 18, 232) 72%, rgb(164, 18, 232) 100%);
 }
 .NuevoJuego {
   position: absolute;
@@ -48,7 +48,7 @@ body {
   width: 10%;
 }
 .iniciosesion{
-  background-color: #71cedaab;
+  background-color: rgb(139, 17, 196);
 }
 
 .formLogin h1 {
@@ -82,7 +82,7 @@ body {
 .formLogin button {
   width: 40%;
   padding: 10px;
-  background-color: rgb(18,180,232); /* Color de fondo del botón */
+  background-color: rgb(165, 30, 228); /* Color de fondo del botón */
   color: #fff; /* Color del texto del botón */
   border: none;
   border-radius: 5px;
@@ -93,7 +93,7 @@ body {
 
 
 .formLogin button:hover {
-  background-color: rgb(58, 77, 239); 
+  background-color: rgb(115, 10, 163); 
   transform: scale(1.1); 
 }
 
@@ -226,7 +226,7 @@ body {
   margin-left: 30%;
   width: 40%;
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 24%, rgba(0,176,234,1) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 24%, rgb(164, 18, 232) 100%);
   background: rgb(242,242,242);
   background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(208,208,233,1) 35%, rgba(185,229,238,1) 100%);
   text-align: center;
