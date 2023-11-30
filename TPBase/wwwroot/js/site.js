@@ -43,8 +43,8 @@ function Likes(idJ, element) {
         },
         success: function (response) {
             console.log(response);
-            if (elementIsLiked) element.src = '/CorazonRojo.jpg';
-            else element.src = '/CorazonBlanco.jpg';
+            if (elementIsLiked) element.src = '/Imagenes/CorazonRojo.jpg';
+            else element.src = '/Imagenes/CorazonBlanco.jpg';
             h6CantLikes.innerText = response;
         }
 

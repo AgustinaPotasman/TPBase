@@ -85,16 +85,16 @@ namespace TPBase.Models
                     }
                 }
 
-              public static int ActualizarLikesconciertoSP(int idconcierto, int cantLikes)
+             public static int ActualizarLikesconciertoSP(int idJuego, int cantLikes)
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
             {
-                string idconciertoStr = idconcierto.ToString();
-                return db.Execute("sp_ActualizarLikesconcierto", new
+                string idJuegoStr = idJuego.ToString();
+                return db.Execute("sp_ActualizarLikesJuego", new
                 {
-                    Idconcierto = idconciertoStr,
+                    IdJuego = idJuegoStr,
                     CantLikes = cantLikes
-                },);
+                });
             }
         }
         public static int VerCantLikes(int idJ)
