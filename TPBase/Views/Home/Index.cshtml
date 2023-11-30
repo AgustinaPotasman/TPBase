@@ -41,35 +41,35 @@
      <!-- cerrar carrousel -->
   <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
 
-    
-
-
     <div class="row">
         @{
             @foreach (Concierto item in @ViewBag.listaConciertos)
             {
                 <div class="col-md-3">
-                <div class="card bg-dark text-white w-100 mb-5">
-                <div class="col-md-4">
+                <div class="card bg-dark text-white w-100 mb-5" alt="30">
+            
                     <div class="card bg-dark text-white w-100">
-                        <img src="@item.Imagen" class="card-img-top" alt="...">
+                        <img src="@item.Imagen" class="card-img-top" alt="30">
                         <div class="card-body">
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
+<<<<<<< HEAD
                              <p class="card-text">
                             <h6 class="likes">@item.CantLikes</h6>
                             <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg" onclick="Likes(@item.IdConcierto, this)">
                             </p>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalConcierto"
+=======
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
+>>>>>>> 9a162e67a47f7407ab1fe4f1efcf62b588b7db63
                             onclick="MostrarMasInfo(@item.IdConcierto)">Más info</button>
                          </div>
                     </div>
-                   
-                </div>
                 <p>@item.Descripcion</p>
                  <p>$ @item.Precio</p>
                 </div>
                 </div>
             }
+            
         }
 
     </div>
