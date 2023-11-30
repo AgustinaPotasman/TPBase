@@ -50,7 +50,10 @@ body {
 .iniciosesion{
   background-color: rgb(139, 17, 196);
 }
-
+.card-body img{
+  width: 10px;
+  height: 20px;
+}
 .formLogin h1 {
   color: #333; 
 }
@@ -259,8 +262,36 @@ nav .container-fluid img{
   right: 8%;
   color: #eee;
 }
-.card bg-dark text-white w-100 mb-5
+.card col-md-3
 {
+<<<<<<< HEAD
+  display: grid !important ;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important ;
+  margin-top: 2px !important ;
+  gap: 10px !important ;
+}
+.card col-md-3 img
+{
+height: 300px;
+width: 300px;
+}
+
+.likes {
+  font-size: medium;
+  margin-bottom: -11%;
+  margin-left: 12%;
+}
+
+.corazon {
+  width: 10%;
+  height: 12%;
+}
+
+.masInfo{
+  margin-top: 5%;
+}
+=======
 width: 100px;
 height: 100px;
 }
+>>>>>>> bb76ee7a4c84ff8c3d887cfadcc09ef81ebd71c6
