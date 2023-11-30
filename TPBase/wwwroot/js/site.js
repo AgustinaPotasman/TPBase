@@ -23,7 +23,7 @@ function MostrarMasInfo(idC) {
             console.log(response);
             $("#FechaConcierto").html("Fecha del concierto: " + response.fechaConcierto);
             $("#Descripcion").html(response.descripcion);
-             $("#Precio").html("Precio: " + response.descripcion);
+            $("#Precio").html("Precio: " + response.descripcion);
         }
     });
 }

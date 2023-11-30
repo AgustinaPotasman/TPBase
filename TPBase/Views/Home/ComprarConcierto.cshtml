@@ -1,57 +1,61 @@
-<html lang="en">
+body>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
-    <body>
 
-    <div class="container">
-        <form action='@Url.Action("PaginaPrincipal","Home")' style="margin-top: 10%;" onsubmit="alert('Gracias por su compra')" >
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="inputEmail4">Titular de Tarjeta</label>
-                    <input type="text" class="form-control" id="inputEmail4" required>
+
+    <div class="container formComprar">
+        <form action='@Url.Action("PaginaPrincipal","Home")' onsubmit="alert('Gracias por su compra')">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="titularTarjeta">Titular de Tarjeta</label>
+                    <input type="text" class="form-control" id="titularTarjeta" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputPassword4">Numero de Tarjeta</label>
-                    <input type="number" class="form-control" id="inputPassword4" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                <div class="col-md-4">
+                    <label for="numeroTarjeta">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX"
+                        required>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputPassword4">Codigo de seguridad</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="XXX" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Direccion</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Calle 1234" required>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputCity">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity" required>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputCity">Provincia</label>
-                    <input type="text" class="form-control" id="inputCity" required>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputZip">Código Postal</label>
-                    <input type="text" class="form-control" id="inputZip" required>
+                <div class="col-md-4">
+                    <label for="codigoSeguridad">Código de seguridad</label>
+                    <input type="password" class="form-control" id="codigoSeguridad" placeholder="XXX" required>
                 </div>
             </div>
             <div class="form-group">
-                <a href="#">Terminos de venta</a>
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Calle 1234" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="provincia">Provincia</label>
+                    <input type="text" class="form-control" id="provincia" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="codigoPostal">Código Postal</label>
+                    <input type="text" class="form-control" id="codigoPostal" required>
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
-                    <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="terminosCheck" required>
+                    <label class="form-check-label" for="terminosCheck">
                         He leído los terminos de venta de World Concert
                     </label>
                 </div>
             </div>
-            <button class="btn btn-success" type="submit" style="margin-bottom: 5px;">PAGAR</button>
+            <button class="btn btn-success" type="submit">PAGAR</button>
         </form>
     </div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>

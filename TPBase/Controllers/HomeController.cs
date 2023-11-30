@@ -36,7 +36,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult VerificarUsuario(Usuario U)
+    /*public IActionResult VerificarUsuario(Usuario U)
     {
 
         if (VerificarSiExisteUsuario(U) == true)
@@ -57,6 +57,30 @@ public class HomeController : Controller
             ViewBag.Mensaje = "El usuario no existe o es incorrecto";
             return View("IniciarSesion");
         }
+    }*/
+
+    public IActionResult VerificarUsuario(Usuario U)
+    {
+
+        if (VerificarSiExisteUsuario(U) == true)
+        {
+            Usuario usuarioBD = BD.BuscarUsuarioXNombre(U.Nombre);
+            if (usuarioBD.Contraseña == U.Contraseña)
+            {
+                return RedirectToAction("PaginaPrincipal", "Home");
+
+            }
+            else
+            {
+                ViewBag.Mensaje = "La contraseña es incorrecta";
+                return View("IniciarSesion");
+            }
+        }
+        else
+        {
+            ViewBag.Mensaje = "El usuario no existe o es incorrecto";
+            return View("IniciarSesion");
+        }
     }
     public bool VerificarSiExisteUsuario(Usuario U)
     {
@@ -65,12 +89,12 @@ public class HomeController : Controller
     public IActionResult VerificarUsuarioRegistro(Usuario U, string Contraseña2)
     {
 
-        if(VerificarSiExisteUsuario(U) == true)
+        if (VerificarSiExisteUsuario(U) == true)
         {
             ViewBag.Mensaje = "El usuario ya existe, ingrese otro nombre";
             return View("Registrarse");
         }
-        if(U.Contraseña != Contraseña2)
+        if (U.Contraseña != Contraseña2)
         {
             ViewBag.Mensaje = "Las contraseñas no coinciden";
             return View("Registrarse");
@@ -86,8 +110,9 @@ public class HomeController : Controller
     public IActionResult OlvidoContraseña(Usuario U)
     {
         ViewBag.Usuario = BD.BuscarContraXUsuario(U.Nombre);
-        if (ViewBag.Usuario != null) {
-        ViewBag.Mensaje = "La contraseña es: " + ViewBag.Usuario.Contraseña;
+        if (ViewBag.Usuario != null)
+        {
+            ViewBag.Mensaje = "La contraseña es: " + ViewBag.Usuario.Contraseña;
         }
         else
         {
@@ -95,7 +120,7 @@ public class HomeController : Controller
         }
         return View();
     }
-        public IActionResult BuscarOlvidoContraseña()
+    public IActionResult BuscarOlvidoContraseña()
     {
         return View("OlvidoContraseña");
     }
@@ -113,21 +138,22 @@ public class HomeController : Controller
             return View("Registrarse");
         }
     }
-    
+
     public IActionResult PaginaPrincipal()
     {
         @ViewBag.listaconciertos = BD.TraerConciertos();
         return View("Index");
     }
-    
+
     public Concierto MostrarConciertosAjax(int IdConcierto)
     {
         return BD.verInfoConcierto(IdConcierto);
-        
+
     }
-   public IActionResult ComprarConcierto(){
-    return View();
-   }
+    public IActionResult ComprarConcierto()
+    {
+        return View();
+    }
 
     public Concierto MostrarMasInfoAjax(int IdConcierto)
     {
