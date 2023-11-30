@@ -57,10 +57,12 @@
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
                             onclick="MostrarMasInfo(@item.IdConcierto)">Más info</button>
-
                          </div>
                     </div>
+                   
                 </div>
+                <p>@item.Descripcion</p>
+                 <p>$ @item.Precio</p>
                 </div>
                 </div>
             }
