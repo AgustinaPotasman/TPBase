@@ -60,7 +60,27 @@ body {
   width: 50%; /* Puedes ajustar el ancho según tus necesidades */
 }
 
-
+nav .container-fluid a, nav .container-fluid img{
+  margin-right: 1%;
+}
+nav .container-fluid{
+  margin-right: 10%;
+}
+nav{
+  background-color:black;
+  height: 60px;
+}
+nav .container-fluid{
+  display: flex;
+  align-items: center;
+}
+nav .container-fluid a{
+  text-decoration: none;
+  color: white;
+}
+nav .container-fluid img{
+  margin-top: 0.6%;
+}
 .carousel-indicators {
   position: absolute;
   bottom: 0;
@@ -74,7 +94,9 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
+.container{
+  height: 300px;
+}
 .imag1{
   margin-left: 55px;
 }

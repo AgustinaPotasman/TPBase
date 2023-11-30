@@ -25,6 +25,7 @@ function MostrarMasInfo(idC) {
             $("#Precio").html("Precio: " + response.Precio);
         }
     });
+}
     function Likes(idc, element) {
         let h6CantLikes = element.parentNode.children[2];
         let elementIsLiked = element.src.includes('CorazonBlanco.jpg');
@@ -39,12 +40,12 @@ function MostrarMasInfo(idC) {
             },
             success: function (response) {
                 console.log(response);
-                if (elementIsLiked) element.src = '/CorazonRojo.jpg';
-                else element.src = '/CorazonBlanco.jpg';
+                if (elementIsLiked) element.src = '../Imagenes/CorazonRojo.jpg';
+                else element.src = '../Imagenes/CorazonBlanco.jpg';
                 h6CantLikes.innerText = response;
             }
     
-        })
+        });
     }
-}
+
 
