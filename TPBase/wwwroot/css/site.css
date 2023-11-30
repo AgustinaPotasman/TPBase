@@ -261,13 +261,12 @@ nav .container-fluid img{
   color: #eee;
 }
 
-<<<<<<< HEAD
 .col-md-3{
   padding: 2%;
 }
 .col-md-3 img{
   width: 20;
-=======
+}
 .corazon img{
   width: 10%;
   height: 12%;
@@ -277,5 +276,5 @@ nav .container-fluid img{
   font-size: medium;
   margin-bottom: -11%;
   margin-left: 12%;
->>>>>>> 068cd2bd07387c18a84a4c0b813b5d0d2f31b148
+
 }
