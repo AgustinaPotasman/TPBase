@@ -39,7 +39,7 @@ public class HomeController : Controller
     [HttpPost]
     public int LikesAjax(int IdConcierto, int cantLikes)
     {
-        BD.AgregarLikes(IdConcierto, cantLikes);
+        BD.ActualizarLikesconciertoSP(IdConcierto, cantLikes);
         return BD.VerCantLikes(IdConcierto);
     }
 

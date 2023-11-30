@@ -95,7 +95,7 @@ namespace TPBase.Models
                 {
                     Idconcierto = idconciertoStr,
                     CantLikes = cantLikes
-                }, commandType: CommandType.StoredProcedure);
+                });
             }
         }
         public static int VerCantLikes(int idJ)
