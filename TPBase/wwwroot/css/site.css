@@ -238,3 +238,14 @@ body {
   right: 8%;
   color: #eee;
 }
+
+.corazon img{
+  width: 10%;
+  height: 12%;
+}
+
+.likes{
+  font-size: medium;
+  margin-bottom: -11%;
+  margin-left: 12%;
+}
