@@ -46,7 +46,7 @@
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
                                                          <p class="card-text">
                             <h6 class="likes">@item.CantLikes</h6>
-                            <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg" onclick="Likes(@item.IdConcierto, this)">
+                            <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg" onclick="Likes(@item.IdConcierto, this)" style="width:100px;">
                             </p>                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
                             onclick="MostrarMasInfo(@item.IdConcierto)">Comprar</button>
 

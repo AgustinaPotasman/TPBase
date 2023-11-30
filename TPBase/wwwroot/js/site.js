@@ -20,13 +20,14 @@ function MostrarMasInfo(idC) {
         data: { Idconcierto: idC },
         success: function (response) {
             console.log(response);
-            $("#FechaConcierto").html("Fecha del concierto: " + response.fechaConcierto);
+            $("#FechaCreacion").html("Fecha del concierto: " + response.fechaConcierto.substr(0,10));
             $("#Descripcion").html(response.descripcion);
-            $("#Precio").html("Precio: " + response.Precio);
+            $("#Precio").html("Precio: " + response.precio);
         }
     });
 }
-    function Likes(idc, element) {
+function Likes(idc, element) {
+    alert("entre");
         let h6CantLikes = element.parentNode.children[2];
         let elementIsLiked = element.src.includes('CorazonBlanco.jpg');
         $.ajax({
