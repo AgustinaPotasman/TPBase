@@ -265,6 +265,7 @@ nav .container-fluid img{
 }
 .card col-md-3
 {
+<<<<<<< HEAD
   display: grid !important ;
   grid-template-columns: 1fr 1fr 1fr 1fr !important ;
   margin-top: 2px !important ;
@@ -290,3 +291,8 @@ width: 300px;
 .masInfo{
   margin-top: 5%;
 }
+=======
+width: 100px;
+height: 100px;
+}
+>>>>>>> bb76ee7a4c84ff8c3d887cfadcc09ef81ebd71c6
