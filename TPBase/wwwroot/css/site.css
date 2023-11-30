@@ -54,10 +54,9 @@ body {
 .formLogin h1 {
   color: #333; 
 }
-/* Alinea el carrusel al centro */
 #carouselExampleIndicators {
   margin: auto;
-  width: 50%; /* Puedes ajustar el ancho según tus necesidades */
+  width: 50%; 
 }
 
 nav .container-fluid a, nav .container-fluid img{
@@ -227,7 +226,7 @@ nav .container-fluid img{
 }
 
 .buttonComprar:hover .text {
-  color: transparent;
+  color: transparent ;
 }
 
 .buttonComprar:hover .icon {
