@@ -238,3 +238,8 @@ body {
   right: 8%;
   color: #eee;
 }
+.card bg-dark text-white w-100 mb-5
+{
+width: 100px;
+height: 100px;
+}
