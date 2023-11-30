@@ -41,18 +41,15 @@
      <!-- cerrar carrousel -->
   <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
 
-    
-
-
     <div class="row">
         @{
             @foreach (Concierto item in @ViewBag.listaConciertos)
             {
                 <div class="col-md-3">
-                <div class="card bg-dark text-white w-100 mb-5">
-                <div class="col-md-4">
+                <div class="card bg-dark text-white w-100 mb-5" alt="30">
+            
                     <div class="card bg-dark text-white w-100">
-                        <img src="@item.Imagen" class="card-img-top" alt="...">
+                        <img src="@item.Imagen" class="card-img-top" alt="30">
                         <div class="card-body">
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
@@ -60,12 +57,13 @@
                          </div>
                     </div>
                    
-                </div>
+
                 <p>@item.Descripcion</p>
                  <p>$ @item.Precio</p>
                 </div>
                 </div>
             }
+            
         }
 
     </div>
