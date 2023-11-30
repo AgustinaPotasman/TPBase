@@ -40,8 +40,8 @@ function MostrarMasInfo(idC) {
             },
             success: function (response) {
                 console.log(response);
-                if (elementIsLiked) element.src = '../Imagenes/CorazonRojo.jpg';
-                else element.src = '../Imagenes/CorazonBlanco.jpg';
+                if (elementIsLiked) element.src = '/Imagenes/CorazonRojo.jpg';
+                else element.src = '/Imagenes/CorazonBlanco.jpg';
                 h6CantLikes.innerText = response;
             }
     
