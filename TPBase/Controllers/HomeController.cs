@@ -6,6 +6,12 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private IWebHostEnvironment Environment;
+         private readonly TPBase _context;
+
+        public HomeController(TPBase context)
+        {
+            _context = context;
+        }
 
     public HomeController(IWebHostEnvironment environment)
     {
@@ -152,5 +158,28 @@ public class HomeController : Controller
         return View("Index");
 
     }
+                    public IActionResult HistorialCompras()
+        {
+            var historial = _context.HistorialCompras.ToList();
+            return View(historial);
+        }
+
+
+     public IActionResult AgregarCompra(int idUsuario, string idConcierto, int cantidad, decimal precioTotal)
+        {
+            var nuevaCompra = new HistorialCompra
+            {
+                IdUsuario = idUsuario,
+                IdConcierto = idConcierto,
+                FechaCompra = DateTime.Now,
+                Cantidad = cantidad,
+                PrecioTotal = precioTotal
+            };
+
+            TPBase_context.HistorialCompras.Add(nuevaCompra);
+            TPBase_context.SaveChanges();
+
+            return RedirectToAction("Index", "Home"); // Redirigir a la página principal
+        }
 
 }
