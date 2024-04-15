@@ -1,4 +1,4 @@
-
+@model List<HistorialCompras>
 
 <h2>Historial de Compras</h2>
 
@@ -8,8 +8,6 @@
             <th>Usuario</th>
             <th>Concierto</th>
             <th>Fecha de Compra</th>
-            <th>Cantidad</th>
-            <th>Precio Total</th>
         </tr>
     </thead>
     <tbody>
@@ -19,8 +17,6 @@
                 <td>@compra.IdUsuario</td>
                 <td>@compra.IdConcierto</td>
                 <td>@compra.FechaCompra</td>
-                <td>@compra.Cantidad</td>
-                <td>@compra.PrecioTotal</td>
             </tr>
         }
     </tbody>

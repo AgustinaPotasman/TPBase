@@ -8,7 +8,7 @@ namespace TPBase.Models
         public string Contraseña {get; set;}
 
         public Usuario(int idUsuario, string contraseña, string nombre)
-        {
+        {           
             IdUsuario = idUsuario;
             Contraseña = contraseña;
             Nombre = nombre;

@@ -106,7 +106,22 @@ namespace TPBase.Models
                 return db.QueryFirstOrDefault<int>(sql, new { pIdconcierto = idJ });
             }
         }
-
+         public static void GuardarCompra(int idUsuario, int idConcierto, DateTime fechaCompra)
+        {
+            using (SqlConnection db = new SqlConnection(_connectionString))
+            {
+                string sql = "INSERT INTO HistorialCompras VALUES (@pidUsuario, @pidConcierto, @pfechaCompra)";
+                db.Execute(sql, new {pidUsuario = idUsuario, pidConcierto = idConcierto, pfechaCompra = fechaCompra});
+            }
+        }
+    public static List<HistorialCompras> TraerHistorialCompras(int idUsuario)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM HistorialCompras WHERE IdUsuario = @IdUsuario";
+        return db.Query<HistorialCompras>(sql, new { IdUsuario = idUsuario }).ToList();
+    }
+}
    
     }
 }

@@ -4,6 +4,7 @@ namespace TPBase.Controllers;
 
 public class HomeController : Controller
 {
+    public static int idUsuario; 
     private readonly ILogger<HomeController> _logger;
     private IWebHostEnvironment Environment;
        
@@ -51,8 +52,10 @@ public class HomeController : Controller
         if (VerificarSiExisteUsuario(U) == true)
         {
             Usuario usuarioBD = BD.BuscarUsuarioXNombre(U.Nombre);
+
             if (usuarioBD.Contraseña == U.Contraseña)
             {
+                idUsuario = usuarioBD.IdUsuario;
                 return RedirectToAction("PaginaPrincipal", "Home");
 
             }
@@ -125,7 +128,7 @@ public class HomeController : Controller
         }
     }
 
-    public IActionResult PaginaPrincipal()
+    public IActionResult PaginaPrincipal(int idConcierto)
     {
         @ViewBag.listaconciertos = BD.TraerConciertos();
         return View("Index");
@@ -136,9 +139,16 @@ public class HomeController : Controller
         return BD.verInfoConcierto(IdConcierto);
 
     }
-    public IActionResult ComprarConcierto()
+     public IActionResult GuardarConcierto(int idConcierto)
     {
-        return View();
+        DateTime fechaCompra= DateTime.Today;
+        BD.GuardarCompra(idUsuario, idConcierto, fechaCompra);
+        return View("Index");
+    }
+    public IActionResult ComprarConcierto(int idConcierto)
+    {
+          ViewBag.idConcierto = idConcierto;
+          return View(idConcierto);
     }
 
     public Concierto MostrarMasInfoAjax(int IdConcierto)
@@ -152,6 +162,11 @@ public class HomeController : Controller
         return View("Index");
 
     }
-       
-
+     private static List<HistorialCompras> historial = new List<HistorialCompras>();     
+    public IActionResult VerHistorial()
+    {
+        //this._logger.LogInformation("idUsuario: " + idUsuario.ToString());
+       List<HistorialCompras> historial = BD.TraerHistorialCompras(idUsuario);
+        return View("HistorialCompras",historial);
+    }
 }

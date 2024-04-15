@@ -1,3 +1,4 @@
+
 <body>
 
     <head>
@@ -9,7 +10,7 @@
 
 
     <div class="container formComprar">
-        <form action='@Url.Action("PaginaPrincipal","Home")' onsubmit="alert('Gracias por su compra')">
+        <form action='@Url.Action("GuardarConcierto","Home",new {idConcierto=@ViewBag.idConcierto})' onsubmit="alert('Gracias por su compra')">
             <div class="row">
                 <div class="col-md-4">
                     <label for="titularTarjeta">Titular de Tarjeta</label>

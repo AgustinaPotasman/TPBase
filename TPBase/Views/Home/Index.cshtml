@@ -46,8 +46,8 @@
                             <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
                                                          <p class="card-text">
                             <h6 class="likes">@item.CantLikes</h6>
-                            <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg" onclick="Likes(@item.IdConcierto, this)" style="width:100px;">
-                            </p>                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modalconcierto"
+                            <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg"  onclick="Likes(@item.IdConcierto, this)" style="width:100px;">
+                            </p>                            <button type="button" onclick="ShowModal(@(item.IdConcierto))" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#Modalconcierto"
                             onclick="MostrarMasInfo(@item.IdConcierto)">Comprar</button>
 
                          </div>
@@ -80,7 +80,7 @@
                             
                         </span>
                     </button>
-                    <a href='@Url.Action("Comprarconcierto","Home")'>
+                    <a id="comprarButton">
                         <button class="noselect buttonComprar" data-bs-dismiss="modal">
                             <span class="text">Comprar</span>
                             <span class="icon">
@@ -92,3 +92,10 @@
         </div>
     </div>
  
+ <script>
+function ShowModal(idConcierto)
+{
+    $('#Modalconcierto').show();
+    document.getElementById("comprarButton").href = `/Home/ComprarConcierto?idConcierto=${idConcierto}`;
+}
+</script>
