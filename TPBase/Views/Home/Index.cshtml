@@ -96,6 +96,7 @@
 function ShowModal(idConcierto)
 {
     $('#Modalconcierto').show();
+    console.log(idConcierto);
     document.getElementById("comprarButton").href = `/Home/ComprarConcierto?idConcierto=${idConcierto}`;
 }
 </script>

@@ -10,8 +10,9 @@
 
 
     <div class="container formComprar">
-        <form action='@Url.Action("GuardarConcierto","Home",new {idConcierto=@ViewBag.idConcierto})' onsubmit="alert('Gracias por su compra')">
+        <form action='@Url.Action("GuardarConcierto","Home")' onsubmit="alert('Gracias por su compra')">
             <div class="row">
+                <input type="hidden" value=@ViewBag.idConcierto name="idConcierto">
                 <div class="col-md-4">
                     <label for="titularTarjeta">Titular de Tarjeta</label>
                     <input type="text" class="form-control" id="titularTarjeta" required>
