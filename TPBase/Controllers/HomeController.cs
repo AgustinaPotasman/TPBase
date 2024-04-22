@@ -142,6 +142,7 @@ public class HomeController : Controller
      public IActionResult GuardarConcierto(int idConcierto)
     {
         DateTime fechaCompra= DateTime.Today;
+        @ViewBag.listaconciertos = BD.TraerConciertos();
         BD.GuardarCompra(idUsuario, idConcierto, fechaCompra);
         return View("Index");
     }
